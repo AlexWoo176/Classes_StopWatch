@@ -19,11 +19,10 @@ public class Main {
                 }
             }
         }
-
         stopWatch.stop();
 
-        System.out.println("Start Time: \n" + stopWatch.startTime + " milisecond");
-        System.out.println("End Time: \n" + stopWatch.endTime + " milisecond");
+        System.out.println("Start Time: \n" + stopWatch.getStartTime() + " milisecond");
+        System.out.println("End Time: \n" + stopWatch.getEndTime() + " milisecond");
         System.out.println("Time is to operate: \n" + stopWatch.getElapsedTime() + " milisecond");
     }
 }

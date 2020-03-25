@@ -1,28 +1,37 @@
 package classes.stopwatch;
 
-import java.util.Date;
-
 public class StopWatch {
-    public long startTime;
-    public long endTime;
+    private long startTime;
+    private long endTime;
+
+    public long getStartTime() {
+        return startTime;
+    }
+    public void setStartTime(long startTime) {
+        this.startTime = startTime;
+    }
+
+    public long getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(long endTime) {
+        this.endTime = endTime;
+    }
 
     public StopWatch() {
-        Date date = new Date();
-        startTime = date.getTime();
-        endTime = date.getTime();
+        this.startTime = System.currentTimeMillis();
     }
 
-    public long start() {
-        Date date = new Date();
-        return startTime = date.getTime();
+    public void start() {
+        this.startTime = System.currentTimeMillis();
     }
 
-    public long stop() {
-        Date date = new Date();
-        return endTime = date.getTime();
+    public void stop() {
+        this.endTime = System.currentTimeMillis();
     }
 
     public long getElapsedTime() {
-        return endTime - startTime;
+        return this.endTime - this.startTime;
     }
 }
